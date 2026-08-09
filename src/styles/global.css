@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2A241E;
+  --color-secondary: #FAF7F2;
+  --color-accent: #C48B4C;
+  --color-savana-cream: #F4EFE6;
+  --color-savana-light: #FCFAF6;
+  
+  --color-neutral-50: #FCFAF6;
+  --color-neutral-100: #F5F0E6;
+  --color-neutral-200: #E9DFCE;
+  --color-neutral-300: #D9CCB4;
+  --color-neutral-400: #B8A588;
+  --color-neutral-500: #968366;
+  --color-neutral-600: #73624A;
+  --color-neutral-700: #544735;
+  --color-neutral-800: #3B3124;
+  --color-neutral-900: #261F17;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Base custom styles for warm savana theme */
+body {
+  background-color: #FAF7F2;
+  color: #2A241E;
+}

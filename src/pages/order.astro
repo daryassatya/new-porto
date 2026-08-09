@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OrderForm from '../components/react/OrderForm.jsx';
+import projects from '../data/projects.json';
+
+const url = new URL(Astro.request.url);
+const initialProjectParam = url.searchParams.get('project');
+const initialProject = projects.find(p => p.id === initialProjectParam) ? initialProjectParam : null;
+---
+
+<BaseLayout>
+  <section class="pt-32 pb-12 px-6 lg:px-8 text-center max-w-3xl mx-auto">
+    <h1 class="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Mulai Pemesanan</h1>
+    <p class="font-sans text-lg text-neutral-600 leading-relaxed">
+      Pilih jalur pemesanan yang paling sesuai dengan kebutuhan Anda. Saya siap merancang solusi digital terbaik untuk kebutuhan bisnis Anda.
+    </p>
+  </section>
+
+  <section class="pb-24 px-6 lg:px-8">
+    <OrderForm client:load projects={projects} initialProject={initialProject} />
+  </section>
+</BaseLayout>

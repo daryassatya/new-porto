@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroAnimation from '../components/react/HeroAnimation.jsx';
+import StatsExperienceCounter from '../components/react/StatsExperienceCounter.jsx';
+import ServicesBentoGrid from '../components/react/ServicesBentoGrid.jsx';
+import ValueProposition from '../components/react/ValueProposition.jsx';
+---
+
+<BaseLayout>
+  <!-- Section 1: Hero Banner (Fullscreen) -->
+	<HeroAnimation client:load />
+
+  <!-- Section 2: Stats & Track Record -->
+  <section class="bg-white/90 border-y border-neutral-200/80 py-12 relative z-10 shadow-sm">
+    <StatsExperienceCounter client:load />
+  </section>
+
+  <!-- Section 3: System Architecture Capabilities Grid -->
+  <section class="bg-neutral-100/60 border-b border-neutral-200/80 py-16 relative z-10">
+    <ServicesBentoGrid client:load />
+  </section>
+
+  <!-- Section 4: Value Proposition Highlight Section -->
+  <section class="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+    <ValueProposition client:load />
+  </section>
+</BaseLayout>
