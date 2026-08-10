@@ -2,18 +2,23 @@ import React, { useState, useEffect } from 'react';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
 import { fontTranslations } from '../../utils/translations';
 import { Menu, X, Home, Layers, FolderGit2, MessageSquare, ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function NavbarContent() {
   const [lang, setLang] = useState('id');
   const [currentPath, setCurrentPath] = useState('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    // Detect active path
+  const updateCurrentPath = () => {
     if (typeof window !== 'undefined') {
-      setCurrentPath(window.location.pathname);
+      const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+      setCurrentPath(pathname);
+      setMobileMenuOpen(false);
+      document.body.style.overflow = 'unset';
     }
+  };
+
+  useEffect(() => {
+    updateCurrentPath();
 
     const saved = localStorage.getItem('user_lang') || 'id';
     setLang(saved);
@@ -23,17 +28,23 @@ export default function NavbarContent() {
     };
 
     window.addEventListener('langChange', handleLangChange);
-    return () => window.removeEventListener('langChange', handleLangChange);
+    document.addEventListener('astro:page-load', updateCurrentPath);
+
+    return () => {
+      window.removeEventListener('langChange', handleLangChange);
+      document.removeEventListener('astro:page-load', updateCurrentPath);
+    };
   }, []);
 
   const nav = fontTranslations[lang]?.nav || fontTranslations.id.nav;
 
   // Helper to check active route
   const isActive = (path) => {
-    if (path === '/') {
-      return currentPath === '/' || currentPath === '';
+    const cleanPath = path.replace(/\/$/, '') || '/';
+    if (cleanPath === '/') {
+      return currentPath === '/';
     }
-    return currentPath.startsWith(path);
+    return currentPath === cleanPath || currentPath.startsWith(cleanPath + '/');
   };
 
   const navItems = [
@@ -99,74 +110,68 @@ export default function NavbarContent() {
             className="md:hidden p-2.5 rounded-xl bg-neutral-100 text-primary hover:bg-neutral-200/80 transition-colors focus:outline-none border border-neutral-200"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-primary" /> : <Menu className="w-5 h-5 text-primary" />}
           </button>
         </div>
 
       </div>
 
-      {/* Mobile Animated Dropdown Drawer */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden bg-white border-b border-neutral-200/90 shadow-xl overflow-hidden"
-          >
-            <div className="px-5 pt-4 pb-6 space-y-3">
-              <div className="text-[11px] font-mono font-bold uppercase tracking-widest text-neutral-400 px-3 mb-1">
-                Navigasi Menu
+      {/* Mobile Menu Dropdown with Pure CSS Transitions (Bulletproof during Astro View Transitions) */}
+      <div 
+        className={`md:hidden bg-white border-b border-neutral-200/90 shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100 border-t border-neutral-100' : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="px-5 pt-3 pb-6 space-y-3">
+          <div className="text-[11px] font-mono font-bold uppercase tracking-widest text-neutral-400 px-3 mb-1">
+            Navigasi Menu
+          </div>
+
+          {navItems.map((item, idx) => {
+            const IconComp = item.icon;
+            const active = item.isHome 
+              ? (isActive('/') && currentPath !== '/layanan' && currentPath !== '/galeri' && currentPath !== '/order')
+              : isActive(item.href);
+
+            return (
+              <a
+                key={idx}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`flex items-center justify-between p-3.5 rounded-2xl text-sm font-bold transition-all duration-200 ${
+                  active
+                    ? 'bg-primary text-secondary shadow-md'
+                    : 'bg-neutral-50 text-neutral-700 hover:bg-neutral-100'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <IconComp className={`w-4 h-4 ${active ? 'text-accent' : 'text-neutral-500'}`} />
+                  <span>{item.label}</span>
+                </div>
+                <ArrowRight className={`w-4 h-4 ${active ? 'text-accent' : 'text-neutral-400'}`} />
+              </a>
+            );
+          })}
+
+          <div className="pt-2">
+            <a
+              href="/order"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`flex items-center justify-between p-4 rounded-2xl text-sm font-bold transition-all duration-200 ${
+                isActive('/order')
+                  ? 'bg-accent text-primary shadow-md'
+                  : 'bg-accent text-primary hover:bg-yellow-400 shadow-sm'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <MessageSquare className="w-4 h-4 text-primary" />
+                <span>{nav.order}</span>
               </div>
-
-              {navItems.map((item, idx) => {
-                const IconComp = item.icon;
-                const active = item.isHome 
-                  ? (isActive('/') && currentPath !== '/layanan' && currentPath !== '/galeri' && currentPath !== '/order')
-                  : isActive(item.href);
-
-                return (
-                  <a
-                    key={idx}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`flex items-center justify-between p-3.5 rounded-2xl text-sm font-bold transition-all duration-200 ${
-                      active
-                        ? 'bg-primary text-secondary shadow-md'
-                        : 'bg-neutral-50 text-neutral-700 hover:bg-neutral-100'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <IconComp className={`w-4 h-4 ${active ? 'text-accent' : 'text-neutral-500'}`} />
-                      <span>{item.label}</span>
-                    </div>
-                    <ArrowRight className={`w-4 h-4 ${active ? 'text-accent' : 'text-neutral-400'}`} />
-                  </a>
-                );
-              })}
-
-              <div className="pt-2">
-                <a
-                  href="/order"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center justify-between p-4 rounded-2xl text-sm font-bold transition-all duration-200 ${
-                    isActive('/order')
-                      ? 'bg-accent text-primary shadow-md'
-                      : 'bg-accent text-primary hover:bg-yellow-400 shadow-sm'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <MessageSquare className="w-4 h-4 text-primary" />
-                    <span>{nav.order}</span>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-primary" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <ArrowRight className="w-4 h-4 text-primary" />
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }

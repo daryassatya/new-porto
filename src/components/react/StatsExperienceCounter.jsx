@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fontTranslations } from '../../utils/translations';
-import { Instagram, Github, Linkedin } from 'lucide-react';
+import { InstagramIcon, GithubIcon, LinkedinIcon } from './SocialIcons.jsx';
 
 export default function StatsExperienceCounter() {
   const [lang, setLang] = useState('id');
@@ -58,7 +58,7 @@ export default function StatsExperienceCounter() {
                       rel="noopener noreferrer" 
                       className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-accent hover:text-primary backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 transition-all duration-300"
                     >
-                      <Instagram className="w-3.5 h-3.5" />
+                      <InstagramIcon className="w-3.5 h-3.5" />
                       <span>@daryas_satya</span>
                     </a>
 
@@ -69,7 +69,7 @@ export default function StatsExperienceCounter() {
                       className="inline-flex items-center justify-center p-2 bg-white/10 hover:bg-accent hover:text-primary backdrop-blur-md text-white rounded-full border border-white/20 transition-all duration-300"
                       title="GitHub"
                     >
-                      <Github className="w-3.5 h-3.5" />
+                      <GithubIcon className="w-3.5 h-3.5" />
                     </a>
 
                     <a 
@@ -79,7 +79,7 @@ export default function StatsExperienceCounter() {
                       className="inline-flex items-center justify-center p-2 bg-white/10 hover:bg-accent hover:text-primary backdrop-blur-md text-white rounded-full border border-white/20 transition-all duration-300"
                       title="LinkedIn Profile"
                     >
-                      <Linkedin className="w-3.5 h-3.5" />
+                      <LinkedinIcon className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
