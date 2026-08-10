@@ -52,39 +52,46 @@ export const fontTranslations = {
       cta: "Buka Portofolio Jenis Ini",
       items: [
         {
-          systemType: "Sistem CMMS",
-          title: "Computerized Maintenance Management System (CMMS)",
-          subtitle: "Studi Kasus: AP2-CMMS Bandara Soekarno-Hatta",
-          desc: "Sistem manajemen pemeliharaan fasilitas dan aset enterprise. Mengintegrasikan jadwal perawatan berkala, pencatatan work order teknisi, inspeksi fisik, dan pemantauan kesehatan aset secara real-time.",
-          clientTag: "Angkasa Pura II"
+          systemType: "1. CMMS",
+          title: "CMMS (Computerized Maintenance Management System)",
+          subtitle: "AP2-CMMS & ATONREP System",
+          desc: "Sistem manajemen pemeliharaan fasilitas dan pengawasan navigasi maritim. Mengintegrasikan pemantauan kondisi aset bandara Soekarno-Hatta (Angkasa Pura II) dan pelaporan keandalan Sarana Bantu Navigasi Pelayaran (Ditjen Hubla).",
+          clientTag: "Angkasa Pura II & Ditjen Hubla"
         },
         {
-          systemType: "Sistem ERP & MRP",
-          title: "Enterprise & Material Resource Planning (ERP / MRP)",
-          subtitle: "Studi Kasus: ERP Decotatoo & MRP Itokin",
-          desc: "Sistem perencanaan sumber daya perusahaan dan rantai pasokan manufaktur. Digunakan untuk pelacakan stok barang gudang, alur pesanan produksi pabrik, hingga otomatisasi pencatatan arus kas operasional.",
-          clientTag: "Kamiko Cipta Solusi"
+          systemType: "2. CMS",
+          title: "CMS (Content Management System)",
+          subtitle: "Mudik Lebaran 2024 & Assessment Indonesia",
+          desc: "Portal manajemen konten dan informasi publik berkecepatan tinggi. Menyajikan data pergerakan pemantauan arus mudik nasional Kemenhub RI serta platform evaluasi kompetensi pegawai terenkripsi.",
+          clientTag: "Kemenhub RI & Assessment Indonesia"
         },
         {
-          systemType: "Portal Pemantauan Arus",
-          title: "High-Traffic Live Monitoring Portal",
-          subtitle: "Studi Kasus: Sistem Mudik Lebaran 2024",
-          desc: "Portal web informasi publik berkecepatan tinggi dengan integrasi data real-time. Dirancang dengan arsitektur tangguh untuk menangani lonjakan lalu lintas pengakses dalam jumlah besar tanpa hambatan.",
-          clientTag: "Kemenhub RI"
+          systemType: "3. ERP",
+          title: "ERP (Enterprise Resource Planning)",
+          subtitle: "ERP Decotatoo System",
+          desc: "Sistem perencanaan sumber daya perusahaan terintegrasi. Digunakan untuk manajemen stok barang gudang, alur transaksi penjualan/pembelian, hingga otomatisasi pencatatan laporan keuangan perusahaan.",
+          clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "Platform Asesmen SDM",
-          title: "Digital Assessment Center & Online Exam Hub",
-          subtitle: "Studi Kasus: Assessment Indonesia & MentalHub",
-          desc: "Platform evaluasi kompetensi pegawai dan ujian psikotes online terenkripsi. Dilengkapi fitur pembuatan soal otomatis, analisis kualifikasi SDM, rekap presensi digital, serta penerbitan hasil evaluasi.",
-          clientTag: "Disnav Tanjung Priok"
+          systemType: "4. MRP",
+          title: "MRP (Material Requirements Planning)",
+          subtitle: "MRP Itokin System",
+          desc: "Sistem perencanaan kebutuhan material manufaktur. Mengkalkulasi kebutuhan bahan baku pabrik secara otomatis, perkiraan jadwal waktu produksi, dan optimasi alur rantai pasokan pabrik.",
+          clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "Sistem AtoN Reporting",
-          title: "Aids to Navigation (AtoN) Reporting System",
-          subtitle: "Studi Kasus: ATONREP Ditjen Hubla & MP3 System",
-          desc: "Aplikasi pengawasan dan pelaporan Sarana Bantu Navigasi Pelayaran (SBNP) maritim serta sistem manajemen presensi & aspirasi internal pegawai Kemenhub RI.",
-          clientTag: "Ditjen Hubla"
+          systemType: "5. HRMS",
+          title: "HRMS (Human Resource Management System)",
+          subtitle: "MENTALHUB & MP3 System",
+          desc: "Sistem manajemen SDM, tes psikologi online (E-Assessment), presensi harian pegawai, pengajuan cuti digital, dan kanal aspirasi internal pegawai Kemenhub RI Distrik Navigasi Tanjung Priok.",
+          clientTag: "Kemenhub RI & Biro Psikologi"
+        },
+        {
+          systemType: "6. GMP",
+          title: "GMP (Good Manufacturing Practice)",
+          subtitle: "GMP Nutrifood System",
+          desc: "Sistem pengawasan kepatuhan Good Manufacturing Practice (GMP) dan keselamatan kerja (K3) pabrik PT Nutrifood Indonesia untuk audit kebersihan area produksi dan standar mutu pabrik.",
+          clientTag: "PT. Nutrifood Indonesia"
         }
       ]
     },
@@ -154,39 +161,46 @@ export const fontTranslations = {
       cta: "View Category Portfolio",
       items: [
         {
-          systemType: "CMMS System",
-          title: "Computerized Maintenance Management System (CMMS)",
-          subtitle: "Case Study: AP2-CMMS Soekarno-Hatta Airport",
-          desc: "Enterprise facility and asset maintenance management platform. Automates preventive maintenance scheduling, technician work order logging, and real-time asset health tracking.",
-          clientTag: "Angkasa Pura II"
+          systemType: "1. CMMS",
+          title: "CMMS (Computerized Maintenance Management System)",
+          subtitle: "AP2-CMMS & ATONREP System",
+          desc: "Facility maintenance management and maritime navigation monitoring platform. Integrates airport asset tracking for Soekarno-Hatta (Angkasa Pura II) and maritime beacon reporting (Dirjen Hubla).",
+          clientTag: "Angkasa Pura II & Dirjen Hubla"
         },
         {
-          systemType: "ERP & MRP Systems",
-          title: "Enterprise & Material Resource Planning (ERP / MRP)",
-          subtitle: "Case Study: ERP Decotatoo & MRP Itokin",
-          desc: "Integrated enterprise resource planning and supply chain system. Features warehouse inventory tracking, manufacturing production scheduling, and automated cash-flow logging.",
-          clientTag: "Kamiko Cipta Solusi"
+          systemType: "2. CMS",
+          title: "CMS (Content Management System)",
+          subtitle: "Mudik Lebaran 2024 & Assessment Indonesia",
+          desc: "High-speed public content management portal. Delivers national transport traffic analytics for Ministry of Transportation and encrypted employee evaluation center.",
+          clientTag: "Ministry of Transport & Assessment Indonesia"
         },
         {
-          systemType: "Traffic Live Monitoring",
-          title: "High-Traffic Live Monitoring Portal",
-          subtitle: "Case Study: Mudik Lebaran System 2024",
-          desc: "High-availability public web portal delivering real-time transport analytics. Architected to sustain high concurrent traffic volume without performance degradation.",
-          clientTag: "Ministry of Transport"
+          systemType: "3. ERP",
+          title: "ERP (Enterprise Resource Planning)",
+          subtitle: "ERP Decotatoo System",
+          desc: "Integrated enterprise resource planning and supply chain platform. Features warehouse inventory tracking, sales transactions, and automated financial reporting.",
+          clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "Digital HR Assessment",
-          title: "Digital Assessment Center & Online Exam Hub",
-          subtitle: "Case Study: Assessment Indonesia & MentalHub",
-          desc: "Encrypted candidate assessment and online psychometric examination platform. Features automated exam scoring, HR competency analytics, and digital report generation.",
-          clientTag: "Disnav Tanjung Priok"
+          systemType: "4. MRP",
+          title: "MRP (Material Requirements Planning)",
+          subtitle: "MRP Itokin System",
+          desc: "Manufacturing material requirements planning system. Calculates factory raw material needs automatically, production schedules, and supply chain flow.",
+          clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "AtoN Reporting System",
-          title: "Aids to Navigation (AtoN) Reporting System",
-          subtitle: "Case Study: ATONREP Dirjen Hubla & MP3 System",
-          desc: "Maritime Aids to Navigation (AtoN) reporting system for sea transport authorities and internal employee HR attendance management.",
-          clientTag: "Dirjen Hubla"
+          systemType: "5. HRMS",
+          title: "HRMS (Human Resource Management System)",
+          subtitle: "MENTALHUB & MP3 System",
+          desc: "HR management system, online E-Assessment testing, daily employee attendance, digital leave management, and employee grievance portal.",
+          clientTag: "Ministry of Transport & Psychology Bureau"
+        },
+        {
+          systemType: "6. GMP",
+          title: "GMP (Good Manufacturing Practice)",
+          subtitle: "GMP Nutrifood System",
+          desc: "Good Manufacturing Practice (GMP) and workplace safety audit system for PT Nutrifood Indonesia factory production area inspection.",
+          clientTag: "PT. Nutrifood Indonesia"
         }
       ]
     },
