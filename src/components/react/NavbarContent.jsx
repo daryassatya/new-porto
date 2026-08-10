@@ -59,7 +59,7 @@ export default function NavbarContent() {
         
         {/* Left: Brand Logo */}
         <div className="flex items-center">
-          <a href="/" className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-primary flex items-center gap-1 group">
+          <a href="/" className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-primary flex items-baseline gap-1 group">
             <span>Daryas</span>
             <span className="text-accent font-sans text-xl sm:text-2xl font-black group-hover:scale-105 transition-transform inline-block">.tech</span>
           </a>
