@@ -48,49 +48,61 @@ export const fontTranslations = {
     services: {
       badge: "Spesialisasi Kategori Sistem",
       headline: "Ragam Jenis Sistem Web Operasional",
-      subHeadline: "Pilihan arsitektur aplikasi web yang dikembangkan sesuai dengan alur kerja operasional perusahaan dan instansi Anda.",
-      cta: "Buka Portofolio Jenis Ini",
+      subHeadline: "Pengenalan kategori sistem informasi dan arsitektur aplikasi web yang pernah saya bangun beserta contoh proyek riilnya.",
+      cta: "Lihat Detail Proyek Ini",
       items: [
         {
-          systemType: "1. CMMS",
+          systemType: "CMMS",
           title: "CMMS (Computerized Maintenance Management System)",
-          subtitle: "AP2-CMMS & ATONREP System",
-          desc: "Sistem manajemen pemeliharaan fasilitas dan pengawasan navigasi maritim. Mengintegrasikan pemantauan kondisi aset bandara Soekarno-Hatta (Angkasa Pura II) dan pelaporan keandalan Sarana Bantu Navigasi Pelayaran (Ditjen Hubla).",
+          subtitle: "Pengawasan Aset & Pemeliharaan Fasilitas",
+          desc: "Sistem manajemen pemeliharaan terkomputerisasi untuk mengelola jadwal perawatan aset berkala, pencatatan work order teknisi, dan pemantauan kondisi fasilitas secara real-time.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["AP2-CMMS (Bandara Soekarno-Hatta)", "ATONREP (Disnav Tanjung Priok Kemenhub)"],
           clientTag: "Angkasa Pura II & Ditjen Hubla"
         },
         {
-          systemType: "2. CMS",
+          systemType: "CMS",
           title: "CMS (Content Management System)",
-          subtitle: "Mudik Lebaran 2024 & Assessment Indonesia",
-          desc: "Portal manajemen konten dan informasi publik berkecepatan tinggi. Menyajikan data pergerakan pemantauan arus mudik nasional Kemenhub RI serta platform evaluasi kompetensi pegawai terenkripsi.",
+          subtitle: "Portal Informasi Publik & Manajemen Konten",
+          desc: "Platform pengelolaan konten dinamis berarsitektur cepat. Digunakan untuk menyajikan informasi publik berkecepatan tinggi serta platform evaluasi kompetensi instansi.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["MUDIK LEBARAN 2024 (Kemenhub RI)", "ASSESSMENT INDONESIA (Assessment Center)"],
           clientTag: "Kemenhub RI & Assessment Indonesia"
         },
         {
-          systemType: "3. ERP",
+          systemType: "ERP",
           title: "ERP (Enterprise Resource Planning)",
-          subtitle: "ERP Decotatoo System",
-          desc: "Sistem perencanaan sumber daya perusahaan terintegrasi. Digunakan untuk manajemen stok barang gudang, alur transaksi penjualan/pembelian, hingga otomatisasi pencatatan laporan keuangan perusahaan.",
+          subtitle: "Perencanaan Sumber Daya Perusahaan",
+          desc: "Sistem manajemen enterprise terpadu untuk mengelola inventaris stok gudang, alur transaksi penjualan/pembelian, hingga otomatisasi pencatatan arus kas operasional.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["ERP Decotatoo (Manajemen Stok & Keuangan)"],
           clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "4. MRP",
+          systemType: "MRP",
           title: "MRP (Material Requirements Planning)",
-          subtitle: "MRP Itokin System",
-          desc: "Sistem perencanaan kebutuhan material manufaktur. Mengkalkulasi kebutuhan bahan baku pabrik secara otomatis, perkiraan jadwal waktu produksi, dan optimasi alur rantai pasokan pabrik.",
+          subtitle: "Perencanaan Material Manufaktur",
+          desc: "Sistem perencanaan bahan baku manufaktur pabrik untuk kalkulasi otomatis kebutuhan material produksi, peramalan jadwal kerja, dan optimasi alur rantai pasokan.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["MRP Itokin (Rantai Pasokan Manufaktur)"],
           clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "5. HRMS",
+          systemType: "HRMS",
           title: "HRMS (Human Resource Management System)",
-          subtitle: "MENTALHUB & MP3 System",
-          desc: "Sistem manajemen SDM, tes psikologi online (E-Assessment), presensi harian pegawai, pengajuan cuti digital, dan kanal aspirasi internal pegawai Kemenhub RI Distrik Navigasi Tanjung Priok.",
+          subtitle: "Manajemen SDM & E-Assessment System",
+          desc: "Sistem tata kelola sumber daya manusia yang mencakup pengujian psikotes online (E-Assessment), absensi harian pegawai, pengajuan cuti digital, dan portal aspirasi pegawai.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["MENTALHUB (E-Assessment System)", "MP3 (Manajemen Presensi & Pengaduan Pegawai)"],
           clientTag: "Kemenhub RI & Biro Psikologi"
         },
         {
-          systemType: "6. GMP",
+          systemType: "GMP",
           title: "GMP (Good Manufacturing Practice)",
-          subtitle: "GMP Nutrifood System",
-          desc: "Sistem pengawasan kepatuhan Good Manufacturing Practice (GMP) dan keselamatan kerja (K3) pabrik PT Nutrifood Indonesia untuk audit kebersihan area produksi dan standar mutu pabrik.",
+          subtitle: "Pengawasan Kepatuhan Standar Pabrik",
+          desc: "Sistem audit mutu produksi dan keselamatan kerja (K3) industri untuk memastikan kepatuhan alur kerja pabrik serta inspeksi kebersihan area operasional secara terstruktur.",
+          projectExamplesLabel: "Contoh Sistem Yang Dibuat:",
+          projectExamples: ["GMP Nutrifood (Audit Mutu & K3 Pabrik)"],
           clientTag: "PT. Nutrifood Indonesia"
         }
       ]
@@ -157,49 +169,61 @@ export const fontTranslations = {
     services: {
       badge: "System Architecture Categories",
       headline: "Operational Web System Solutions",
-      subHeadline: "Specialized application architectures engineered to streamline operational workflows across enterprise and public institutions.",
-      cta: "View Category Portfolio",
+      subHeadline: "Overview of specialized software system categories I have developed, along with real-world case study projects.",
+      cta: "View Project Details",
       items: [
         {
-          systemType: "1. CMMS",
+          systemType: "CMMS",
           title: "CMMS (Computerized Maintenance Management System)",
-          subtitle: "AP2-CMMS & ATONREP System",
-          desc: "Facility maintenance management and maritime navigation monitoring platform. Integrates airport asset tracking for Soekarno-Hatta (Angkasa Pura II) and maritime beacon reporting (Dirjen Hubla).",
+          subtitle: "Facility Maintenance & Asset Tracking",
+          desc: "Computerized maintenance system to automate scheduled asset maintenance, technician work order logging, and real-time facility health tracking.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["AP2-CMMS (Soekarno-Hatta Airport)", "ATONREP (Maritime Navigation District)"],
           clientTag: "Angkasa Pura II & Dirjen Hubla"
         },
         {
-          systemType: "2. CMS",
+          systemType: "CMS",
           title: "CMS (Content Management System)",
-          subtitle: "Mudik Lebaran 2024 & Assessment Indonesia",
-          desc: "High-speed public content management portal. Delivers national transport traffic analytics for Ministry of Transportation and encrypted employee evaluation center.",
+          subtitle: "Public Information Portal & Content Hub",
+          desc: "High-performance dynamic content platform. Engineered to deliver national traffic analytics and organizational evaluation systems.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["MUDIK LEBARAN 2024 (Ministry of Transport)", "ASSESSMENT INDONESIA (Assessment Center)"],
           clientTag: "Ministry of Transport & Assessment Indonesia"
         },
         {
-          systemType: "3. ERP",
+          systemType: "ERP",
           title: "ERP (Enterprise Resource Planning)",
-          subtitle: "ERP Decotatoo System",
-          desc: "Integrated enterprise resource planning and supply chain platform. Features warehouse inventory tracking, sales transactions, and automated financial reporting.",
+          subtitle: "Enterprise Resource Planning",
+          desc: "Integrated enterprise management platform to streamline warehouse inventory tracking, sales/purchase orders, and financial reporting.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["ERP Decotatoo (Inventory & Finance)"],
           clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "4. MRP",
+          systemType: "MRP",
           title: "MRP (Material Requirements Planning)",
-          subtitle: "MRP Itokin System",
-          desc: "Manufacturing material requirements planning system. Calculates factory raw material needs automatically, production schedules, and supply chain flow.",
+          subtitle: "Manufacturing Material Planning",
+          desc: "Manufacturing material planning system for automated raw material calculation, factory scheduling, and supply chain optimization.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["MRP Itokin (Manufacturing Supply Chain)"],
           clientTag: "PT. Kamiko Cipta Solusi"
         },
         {
-          systemType: "5. HRMS",
+          systemType: "HRMS",
           title: "HRMS (Human Resource Management System)",
-          subtitle: "MENTALHUB & MP3 System",
-          desc: "HR management system, online E-Assessment testing, daily employee attendance, digital leave management, and employee grievance portal.",
+          subtitle: "HR Management & E-Assessment System",
+          desc: "Comprehensive HR management system featuring online psychometrics (E-Assessment), employee daily attendance, digital leave, and grievance portal.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["MENTALHUB (E-Assessment System)", "MP3 (HR Attendance & Grievance)"],
           clientTag: "Ministry of Transport & Psychology Bureau"
         },
         {
-          systemType: "6. GMP",
+          systemType: "GMP",
           title: "GMP (Good Manufacturing Practice)",
-          subtitle: "GMP Nutrifood System",
-          desc: "Good Manufacturing Practice (GMP) and workplace safety audit system for PT Nutrifood Indonesia factory production area inspection.",
+          subtitle: "Factory Quality Standard Compliance",
+          desc: "Industrial quality audit and workplace safety (K3) system to ensure strict production line compliance and area cleanliness inspections.",
+          projectExamplesLabel: "Systems Developed:",
+          projectExamples: ["GMP Nutrifood (Quality & Safety Audit)"],
           clientTag: "PT. Nutrifood Indonesia"
         }
       ]

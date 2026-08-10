@@ -20,8 +20,25 @@ export default function PortfolioFilterGrid({ initialProjects }) {
 
   const isEn = lang === 'en';
 
-  const categoryList = ['Semua', 'CMMS', 'CMS', 'ERP', 'MRP', 'HRMS', 'GMP'];
-  const categoryListEn = ['All', 'CMMS', 'CMS', 'ERP', 'MRP', 'HRMS', 'GMP'];
+  const categoryList = [
+    { label: 'Semua', num: 'ALL' },
+    { label: 'CMMS', num: '01' },
+    { label: 'CMS', num: '02' },
+    { label: 'ERP', num: '03' },
+    { label: 'MRP', num: '04' },
+    { label: 'HRMS', num: '05' },
+    { label: 'GMP', num: '06' }
+  ];
+
+  const categoryListEn = [
+    { label: 'All', num: 'ALL' },
+    { label: 'CMMS', num: '01' },
+    { label: 'CMS', num: '02' },
+    { label: 'ERP', num: '03' },
+    { label: 'MRP', num: '04' },
+    { label: 'HRMS', num: '05' },
+    { label: 'GMP', num: '06' }
+  ];
 
   const activeCategories = isEn ? categoryListEn : categoryList;
 
@@ -44,27 +61,27 @@ export default function PortfolioFilterGrid({ initialProjects }) {
 
   return (
     <div>
-      {/* Modern Animated Filter Pill Bar */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10 md:mb-14 p-1.5 bg-neutral-200/50 backdrop-blur-md rounded-full border border-neutral-300/60 max-w-fit mx-auto shadow-inner">
-        {activeCategories.map((cat, idx) => {
-          const isActive = filter === cat;
+      {/* Spacious Segmented Filter Tab Switcher Bar (Zero scale shift) */}
+      <div className="bg-neutral-100/90 p-2.5 rounded-2xl md:rounded-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 max-w-4xl mx-auto mb-10 md:mb-14 border border-neutral-200/90 shadow-sm">
+        {activeCategories.map((item, idx) => {
+          const isActive = filter === item.label;
 
           return (
             <button
               key={idx}
-              onClick={() => setFilter(cat)}
-              className={`relative px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-300 outline-none z-10 ${
-                isActive ? 'text-secondary font-bold' : 'text-neutral-600 hover:text-primary'
+              onClick={() => setFilter(item.label)}
+              className={`flex items-center gap-2.5 px-4.5 py-2.5 sm:px-5 sm:py-3 rounded-xl md:rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 outline-none ${
+                isActive 
+                  ? 'bg-primary text-secondary font-bold border border-accent/50 shadow-md' 
+                  : 'bg-white/80 text-neutral-600 border border-neutral-200/60 hover:text-primary hover:bg-white hover:border-neutral-300'
               }`}
             >
-              {isActive && (
-                <motion.span
-                  layoutId="activeGalleryFilterPill"
-                  transition={{ type: "spring", stiffness: 450, damping: 35 }}
-                  className="absolute inset-0 bg-primary rounded-full border border-accent/40 shadow-lg -z-10"
-                />
-              )}
-              <span>{cat}</span>
+              <span className={`inline-flex items-center justify-center px-1.5 h-5 rounded-full text-[10px] font-mono font-bold transition-colors ${
+                isActive ? 'bg-accent/20 text-accent border border-accent/40' : 'bg-neutral-200/80 text-neutral-500'
+              }`}>
+                {item.num}
+              </span>
+              <span className="whitespace-nowrap font-bold">{item.label}</span>
             </button>
           );
         })}
