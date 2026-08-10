@@ -13,16 +13,29 @@ export default function OrderForm({ projects, initialProject }) {
     description: ''
   });
 
-  // Fallback for static generation where query strings aren't available at build time
-  useEffect(() => {
-    if (!initialProject && typeof window !== 'undefined') {
+  const syncQueryParam = () => {
+    if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const proj = params.get('project');
-      if (proj && projects.find(p => p.id === proj)) {
-        setSelectedType('existing');
-        setFormData(prev => ({ ...prev, projectId: proj }));
+      if (proj && projects) {
+        const found = projects.find(p => 
+          p.id.toLowerCase() === proj.toLowerCase() || 
+          p.name.toLowerCase().includes(proj.toLowerCase())
+        );
+        if (found) {
+          setSelectedType('existing');
+          setFormData(prev => ({ ...prev, projectId: found.id }));
+        }
       }
     }
+  };
+
+  useEffect(() => {
+    syncQueryParam();
+    document.addEventListener('astro:page-load', syncQueryParam);
+    return () => {
+      document.removeEventListener('astro:page-load', syncQueryParam);
+    };
   }, [initialProject, projects]);
 
   const handleChange = (e) => {
@@ -99,18 +112,19 @@ export default function OrderForm({ projects, initialProject }) {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Contoh: Budi Santoso"
                   className="w-full px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
                 />
               </div>
+
               <div>
-                <label className="block text-sm font-medium text-primary mb-2">Nomor HP / WhatsApp</label>
+                <label className="block text-sm font-medium text-primary mb-2">Nomor WhatsApp / Email</label>
                 <input 
                   type="text"
                   name="contact"
                   value={formData.contact}
                   onChange={handleChange}
-                  placeholder="08123456789"
+                  placeholder="Contoh: 08123456789"
                   className="w-full px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
                 />
               </div>
@@ -118,25 +132,29 @@ export default function OrderForm({ projects, initialProject }) {
 
             {selectedType === 'custom' && (
               <div>
-                <label className="block text-sm font-medium text-primary mb-2">Ringkasan Kebutuhan (Opsional)</label>
+                <label className="block text-sm font-medium text-primary mb-2">Jelaskan Kebutuhan Project</label>
                 <textarea 
                   name="description"
+                  rows="4"
                   value={formData.description}
                   onChange={handleChange}
-                  placeholder="Ceritakan sedikit tentang ide website Anda..."
-                  rows="3"
+                  placeholder="Ceritakan gambaran singkat sistem atau website yang ingin Anda buat..."
                   className="w-full px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50 text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
                 ></textarea>
               </div>
             )}
 
-            <button 
+            <button
               type="submit"
               disabled={!isFormValid()}
-              className="w-full flex items-center justify-center gap-2 bg-primary text-secondary px-6 py-4 rounded-xl font-medium transition-all duration-400 hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed"
+              className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all duration-300 ${
+                isFormValid() 
+                  ? 'bg-accent text-primary hover:bg-yellow-400 shadow-md cursor-pointer' 
+                  : 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
+              }`}
             >
-              <Send className="w-5 h-5" />
-              Kirim via WhatsApp
+              <span>Kirim Pesanan via WhatsApp</span>
+              <Send className="w-4 h-4" />
             </button>
           </motion.form>
         )}

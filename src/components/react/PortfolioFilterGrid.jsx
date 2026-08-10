@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Building2 } from 'lucide-react';
+import { Code2, Building2, ArrowRight } from 'lucide-react';
 
 export default function PortfolioFilterGrid({ initialProjects }) {
   const [lang, setLang] = useState('id');
@@ -61,7 +61,7 @@ export default function PortfolioFilterGrid({ initialProjects }) {
 
   return (
     <div>
-      {/* Spacious Segmented Filter Tab Switcher Bar (Zero scale shift) */}
+      {/* Spacious Segmented Filter Tab Switcher Bar */}
       <div className="bg-neutral-100/90 p-2.5 rounded-2xl md:rounded-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 max-w-4xl mx-auto mb-10 md:mb-14 border border-neutral-200/90 shadow-sm">
         {activeCategories.map((item, idx) => {
           const isActive = filter === item.label;
@@ -99,6 +99,7 @@ export default function PortfolioFilterGrid({ initialProjects }) {
           const clientName = isEn ? (project.client_en || project.client) : project.client;
           const description = isEn ? (project.description_en || project.description) : project.description;
           const categoryLabel = getCategoryFullLabel(project);
+          const orderUrl = `/order?project=${encodeURIComponent(project.id)}`;
 
           return (
             <div
@@ -106,12 +107,13 @@ export default function PortfolioFilterGrid({ initialProjects }) {
               className="bg-white rounded-3xl border border-neutral-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between group h-full"
             >
               <div>
-                <div className="aspect-video bg-neutral-900 w-full relative overflow-hidden">
+                {/* Image Header with Direct Click to Order */}
+                <a href={orderUrl} className="block aspect-video bg-neutral-900 w-full relative overflow-hidden group/img">
                   {project.image ? (
                     <img 
                       src={project.image} 
                       alt={project.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-smooth" 
+                      className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700 ease-smooth" 
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
@@ -122,8 +124,9 @@ export default function PortfolioFilterGrid({ initialProjects }) {
                   <div className="absolute top-4 right-4 bg-primary text-secondary text-[11px] font-bold px-3 py-1 rounded-full border border-accent/30 shadow-md">
                     {categoryLabel}
                   </div>
-                </div>
+                </a>
 
+                {/* Card Info */}
                 <div className="p-6 md:p-7">
                   {clientName && (
                     <div className="flex items-center gap-1.5 text-accent text-xs font-semibold mb-2">
@@ -132,14 +135,27 @@ export default function PortfolioFilterGrid({ initialProjects }) {
                     </div>
                   )}
 
-                  <h3 className="font-serif text-xl font-bold text-primary mb-3 leading-snug group-hover:text-accent transition-colors">
-                    {project.name}
-                  </h3>
+                  <a href={orderUrl} className="block group/title">
+                    <h3 className="font-serif text-xl font-bold text-primary mb-3 leading-snug group-hover/title:text-accent transition-colors">
+                      {project.name}
+                    </h3>
+                  </a>
                   
-                  <p className="text-neutral-600 font-sans text-sm leading-relaxed">
+                  <p className="text-neutral-600 font-sans text-sm leading-relaxed mb-6">
                     {description}
                   </p>
                 </div>
+              </div>
+
+              {/* Compact, Sleek Action Button Footer */}
+              <div className="px-6 pb-6 md:px-7 md:pb-7 pt-0 mt-auto border-t border-neutral-100/80">
+                <a 
+                  href={orderUrl}
+                  className="inline-flex items-center justify-between w-full bg-neutral-100 hover:bg-primary text-neutral-800 hover:text-secondary px-4.5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 shadow-2xs group/btn mt-4"
+                >
+                  <span>{isEn ? "Pesan System Ini" : "Pesan System Ini"}</span>
+                  <ArrowRight className="w-4 h-4 text-accent group-hover/btn:translate-x-1 transition-transform shrink-0" />
+                </a>
               </div>
             </div>
           );
