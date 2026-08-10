@@ -28,7 +28,7 @@ export default function FooterContent() {
         
         <div className="flex gap-6">
           <a href="https://github.com/daryassatya" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-secondary transition-colors duration-300">GitHub</a>
-          <a href="https://www.linkedin.com/in/dimas-aryasatya-067334262/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-secondary transition-colors duration-300">LinkedIn</a>
+          <a href="https://id.linkedin.com/in/dimas-aryasatya" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-secondary transition-colors duration-300">LinkedIn</a>
           <a href="https://www.instagram.com/daryas_satya/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-secondary transition-colors duration-300">Instagram</a>
         </div>
       </div>

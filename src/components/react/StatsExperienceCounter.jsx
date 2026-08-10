@@ -73,11 +73,11 @@ export default function StatsExperienceCounter() {
                     </a>
 
                     <a 
-                      href="https://www.linkedin.com/in/dimas-aryasatya-067334262/" 
+                      href="https://id.linkedin.com/in/dimas-aryasatya" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="inline-flex items-center justify-center p-2 bg-white/10 hover:bg-accent hover:text-primary backdrop-blur-md text-white rounded-full border border-white/20 transition-all duration-300"
-                      title="LinkedIn"
+                      title="LinkedIn Profile"
                     >
                       <Linkedin className="w-3.5 h-3.5" />
                     </a>
