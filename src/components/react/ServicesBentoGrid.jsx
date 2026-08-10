@@ -43,7 +43,7 @@ export default function ServicesBentoGrid() {
     {
       num: "03",
       badge: "ERP System",
-      image: "/images/hero-showcase.png",
+      image: "/images/hero-showcase.webp",
       link: "/galeri",
       highlights: lang === 'en'
         ? ["Warehouse Inventory Control", "Sales Transaction Logging", "Operational Cash-Flow Automation"]
@@ -52,7 +52,7 @@ export default function ServicesBentoGrid() {
     {
       num: "04",
       badge: "MRP System",
-      image: "/images/project-cmms.png",
+      image: "/images/project-cmms.webp",
       link: "/galeri",
       highlights: lang === 'en'
         ? ["Raw Material Calculation", "Factory Production Scheduling", "Supply Chain Optimization"]

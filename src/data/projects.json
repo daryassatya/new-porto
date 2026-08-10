@@ -53,10 +53,10 @@
     "client": "PT. Kamiko Cipta Solusi (Grootech)",
     "client_en": "PT. Kamiko Cipta Solusi (Grootech)",
     "description": "Sistem Enterprise Resource Planning (ERP) terintegrasi untuk manajemen stok barang, pencatatan transaksi pembelian & penjualan, serta otomatisasi laporan keuangan operasional perusahaan.",
-    "description_en": "Integrated Enterprise Resource Planning (ERP) platform for warehouse inventory tracking, sales transaction processing, and operational cash-flow automation.",
+    "description_en": "Integrated Enterprise Resource Planning (ERP) platform for warehouse inventory tracking, sales transaction processing, and automated cash-flow automation.",
     "category": "ERP (Enterprise Resource Planning)",
     "category_en": "ERP (Enterprise Resource Planning)",
-    "image": "/images/hero-showcase.png",
+    "image": "/images/hero-showcase.webp",
     "url": ""
   },
   {
@@ -68,7 +68,7 @@
     "description_en": "Material Requirements Planning (MRP) system engineered for automated raw material calculation, factory production scheduling, and supply chain optimization.",
     "category": "MRP (Material Requirements Planning)",
     "category_en": "MRP (Material Requirements Planning)",
-    "image": "/images/project-cmms.png",
+    "image": "/images/project-cmms.webp",
     "url": ""
   },
   {
