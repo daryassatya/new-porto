@@ -130,17 +130,5 @@
     "category_en": "Retail & Web Portals",
     "image": "/images/mp3.webp",
     "url": ""
-  },
-  {
-    "id": "poster-nutrifood",
-    "name": "Poster Design Nutrifood",
-    "client": "PT. Nutrifood Indonesia",
-    "client_en": "PT. Nutrifood Indonesia",
-    "description": "Perancangan materi visual, desain poster keselamatan kerja K3, dan media komunikasi publik internal perusahaan.",
-    "description_en": "Visual design media, occupational health and safety (K3) posters, and internal company public communication design.",
-    "category": "Website Retail & Profil",
-    "category_en": "Retail & Web Portals",
-    "image": "/images/gmp-nutrifood.webp",
-    "url": ""
   }
 ]
