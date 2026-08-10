@@ -108,18 +108,6 @@
     "url": ""
   },
   {
-    "id": "web-nyari-tekno",
-    "name": "Web Nyari-Tekno",
-    "client": "Nyari-Tekno Studio",
-    "client_en": "Nyari-Tekno Studio",
-    "description": "Pengembangan antarmuka website portal teknologi modern dengan performa tinggi, struktur SEO optimal, dan desain responsif.",
-    "description_en": "High-performance tech portal web development featuring optimized SEO structure and responsive interface design.",
-    "category": "Website Retail & Profil",
-    "category_en": "Retail & Web Portals",
-    "image": "/images/project-retail.png",
-    "url": ""
-  },
-  {
     "id": "sipmas-system",
     "name": "SIPMAS - Sistem Informasi & Pengaduan Masyarakat",
     "client": "Instansi Pemerintahan",
