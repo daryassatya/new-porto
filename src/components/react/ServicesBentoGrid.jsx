@@ -33,7 +33,7 @@ export default function ServicesBentoGrid() {
     {
       num: "02",
       badge: "ERP & MRP Systems",
-      image: "/images/assessment-indonesia.webp",
+      image: "/images/hero-showcase.png",
       link: "/galeri",
       highlights: lang === 'en'
         ? ["Warehouse Inventory Control", "Production Schedule Planning", "Operational Cash-Flow Logging"]
@@ -69,7 +69,7 @@ export default function ServicesBentoGrid() {
     {
       num: "06",
       badge: "Grievance Portal (SIPMAS)",
-      image: "/images/mentalhub.webp",
+      image: "/images/mp3.webp",
       link: "/galeri",
       highlights: lang === 'en'
         ? ["Ticket Status Tracking", "Automated Department Routing", "Transparent Resolution Audit"]

@@ -80,7 +80,7 @@
     "description_en": "Good Manufacturing Practice (GMP) and workplace safety audit system for PT Nutrifood Indonesia. Streamlines daily production area inspections, quality compliance, and safety reporting.",
     "category": "Sistem Manajemen Internal",
     "category_en": "Internal Management Systems",
-    "image": "/images/ap2-cmms.webp",
+    "image": "/images/project-cmms.png",
     "url": ""
   },
   {
@@ -92,7 +92,7 @@
     "description_en": "Integrated Enterprise Resource Planning (ERP) platform for warehouse inventory tracking, sales transaction processing, and operational cash-flow automation.",
     "category": "Sistem Manajemen Internal",
     "category_en": "Internal Management Systems",
-    "image": "/images/assessment-indonesia.webp",
+    "image": "/images/hero-showcase.png",
     "url": ""
   },
   {
@@ -104,7 +104,7 @@
     "description_en": "Material Requirements Planning (MRP) system engineered for automated raw material calculation, factory production scheduling, and supply chain optimization.",
     "category": "Sistem Manajemen Internal",
     "category_en": "Internal Management Systems",
-    "image": "/images/atonrep.webp",
+    "image": "/images/project-cmms.png",
     "url": ""
   },
   {
@@ -116,7 +116,7 @@
     "description_en": "High-performance tech portal web development featuring optimized SEO structure and responsive interface design.",
     "category": "Website Retail & Profil",
     "category_en": "Retail & Web Portals",
-    "image": "/images/mudik-lebaran.webp",
+    "image": "/images/project-retail.png",
     "url": ""
   },
   {
@@ -128,7 +128,7 @@
     "description_en": "Web-based public grievance and reporting portal. Features ticket status tracking, automated department routing, and transparent resolution status monitoring.",
     "category": "Website Retail & Profil",
     "category_en": "Retail & Web Portals",
-    "image": "/images/mentalhub.webp",
+    "image": "/images/mp3.webp",
     "url": ""
   },
   {
@@ -140,7 +140,7 @@
     "description_en": "Visual design media, occupational health and safety (K3) posters, and internal company public communication design.",
     "category": "Website Retail & Profil",
     "category_en": "Retail & Web Portals",
-    "image": "/images/ap2-cmms.webp",
+    "image": "/images/hero-bg.jpg",
     "url": ""
   }
 ]
