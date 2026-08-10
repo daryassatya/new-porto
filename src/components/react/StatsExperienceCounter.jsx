@@ -22,7 +22,7 @@ export default function StatsExperienceCounter() {
 
   const stats = [
     { number: "5+", label: t.exp },
-    { number: "10+", label: t.projects },
+    { number: "25+", label: t.projects },
     { number: "100%", label: t.onTime },
     { number: "24/7", label: t.support },
   ];
