@@ -82,16 +82,9 @@ export const fontTranslations = {
         {
           systemType: "Sistem AtoN Reporting",
           title: "Aids to Navigation (AtoN) Reporting System",
-          subtitle: "Studi Kasus: ATONREP Ditjen Hubla",
-          desc: "Aplikasi pengawasan dan pelaporan Sarana Bantu Navigasi Pelayaran (SBNP) maritim. Memantau keandalan menara suar, pelampung suar, rambu navigasi elektronik, dan audit jaringan keselamatan laut.",
+          subtitle: "Studi Kasus: ATONREP Ditjen Hubla & MP3 System",
+          desc: "Aplikasi pengawasan dan pelaporan Sarana Bantu Navigasi Pelayaran (SBNP) maritim serta sistem manajemen presensi & aspirasi internal pegawai Kemenhub RI.",
           clientTag: "Ditjen Hubla"
-        },
-        {
-          systemType: "Portal Pengaduan Publik",
-          title: "Public Grievance & Service Portal (SIPMAS)",
-          subtitle: "Studi Kasus: SIPMAS & MP3 System",
-          desc: "Portal pelayanan publik dan aspirasi internal terpadu. Dilengkapi sistem penomoran tiket laporan, disposisi otomatis ke unit kerja terkait, serta transparansi status penyelesaian laporan.",
-          clientTag: "Instansi Pemerintah"
         }
       ]
     },
@@ -191,16 +184,9 @@ export const fontTranslations = {
         {
           systemType: "AtoN Reporting System",
           title: "Aids to Navigation (AtoN) Reporting System",
-          subtitle: "Case Study: ATONREP Dirjen Hubla",
-          desc: "Maritime Aids to Navigation (AtoN) reporting system for sea transport authorities. Monitors beacon status, lighthouse operational health, and maritime safety audit trails.",
+          subtitle: "Case Study: ATONREP Dirjen Hubla & MP3 System",
+          desc: "Maritime Aids to Navigation (AtoN) reporting system for sea transport authorities and internal employee HR attendance management.",
           clientTag: "Dirjen Hubla"
-        },
-        {
-          systemType: "Public Grievance Portal",
-          title: "Public Grievance & Service Portal (SIPMAS)",
-          subtitle: "Case Study: SIPMAS & MP3 System",
-          desc: "Integrated public grievance and internal employee feedback portal. Features automated ticket routing, department assignment, and transparent resolution tracking.",
-          clientTag: "Government Agencies"
         }
       ]
     },

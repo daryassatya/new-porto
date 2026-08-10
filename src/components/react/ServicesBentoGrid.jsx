@@ -65,15 +65,6 @@ export default function ServicesBentoGrid() {
       highlights: lang === 'en'
         ? ["Lighthouse Beacon Reliability", "Sea Transport Audit Trail", "Maritime Safety Portal"]
         : ["Keandalan Menara Suar", "Pelaporan Ditjen Hubla", "Keamanan Navigasi Laut"]
-    },
-    {
-      num: "06",
-      badge: "Grievance Portal (SIPMAS)",
-      image: "/images/mp3.webp",
-      link: "/galeri",
-      highlights: lang === 'en'
-        ? ["Ticket Status Tracking", "Automated Department Routing", "Transparent Resolution Audit"]
-        : ["Pelacakan Nomor Tiket", "Disposisi Otomatis Unit Kerja", "Transparansi Status Laporan"]
     }
   ];
 

@@ -106,17 +106,5 @@
     "category_en": "Internal Management Systems",
     "image": "/images/project-cmms.png",
     "url": ""
-  },
-  {
-    "id": "sipmas-system",
-    "name": "SIPMAS - Sistem Informasi & Pengaduan Masyarakat",
-    "client": "Instansi Pemerintahan",
-    "client_en": "Government Agency",
-    "description": "Portal pelayanan publik berbasis web untuk penampungan pengaduan masyarakat. Dilengkapi fitur pelacakan nomor tiket laporan, disposisi penanganan ke unit kerja, dan transparansi status laporan.",
-    "description_en": "Web-based public grievance and reporting portal. Features ticket status tracking, automated department routing, and transparent resolution status monitoring.",
-    "category": "Website Retail & Profil",
-    "category_en": "Retail & Web Portals",
-    "image": "/images/mp3.webp",
-    "url": ""
   }
 ]
