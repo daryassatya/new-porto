@@ -57,7 +57,7 @@ export default function StatsExperienceCounter() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent pointer-events-none"></div>
                 
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-accent mb-1 block">Lead Web Developer</span>
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-accent mb-1 block">Web Developer & IT Consultant</span>
                   <h3 className="font-serif text-2xl font-bold mb-1">Dimas Aryasatya</h3>
                   <p className="text-neutral-300 text-xs font-sans">Spesialis Sistem Internal & Web Retail</p>
                 </div>
