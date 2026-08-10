@@ -49,6 +49,7 @@ export const fontTranslations = {
       badge: "Spesialisasi Kategori Sistem",
       headline: "Ragam Jenis Sistem Web Operasional",
       subHeadline: "Pengenalan kategori sistem informasi dan arsitektur aplikasi web yang pernah saya bangun beserta contoh proyek riilnya.",
+      privateNote: "*Catatan: Beberapa proyek mungkin bersifat private (rahasia) dan tidak ditampilkan berdasarkan kebijakan dan keinginan klien.",
       cta: "Lihat Detail Proyek Ini",
       items: [
         {
@@ -170,6 +171,7 @@ export const fontTranslations = {
       badge: "System Architecture Categories",
       headline: "Operational Web System Solutions",
       subHeadline: "Overview of specialized software system categories I have developed, along with real-world case study projects.",
+      privateNote: "*Note: Some projects might be private or confidential and are not displayed based on client requests and non-disclosure agreements.",
       cta: "View Project Details",
       items: [
         {

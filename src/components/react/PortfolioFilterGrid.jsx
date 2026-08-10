@@ -73,7 +73,7 @@ export default function PortfolioFilterGrid({ initialProjects }) {
               className={`flex items-center gap-2.5 px-4.5 py-2.5 sm:px-5 sm:py-3 rounded-xl md:rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 outline-none ${
                 isActive 
                   ? 'bg-primary text-secondary font-bold border border-accent/50 shadow-md' 
-                  : 'bg-white/80 text-neutral-600 border border-neutral-200/60 hover:text-primary hover:bg-white hover:border-neutral-300'
+                  : 'text-neutral-600 border-none hover:text-primary hover:bg-white hover:border-neutral-300'
               }`}
             >
               <span className={`inline-flex items-center justify-center px-1.5 h-5 rounded-full text-[10px] font-mono font-bold transition-colors ${

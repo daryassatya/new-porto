@@ -33,11 +33,16 @@ export default function GaleriPageContent() {
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mt-4 mb-6">
           {isEn ? "Project Portfolio Gallery" : "Galeri Project"}
         </h1>
-        <p className="font-sans text-lg text-neutral-600 leading-relaxed">
+        <p className="font-sans text-lg text-neutral-600 leading-relaxed mb-4">
           {isEn 
             ? "Explore our portfolio of enterprise web systems and custom digital solutions. Select a relevant case study for your upcoming project."
             : "Eksplorasi portofolio solusi digital dan sistem web yang telah saya kembangkan. Pilih project yang relevan dengan kebutuhan Anda sebagai inspirasi awal."
           }
+        </p>
+        <p className="block text-[10px] sm:text-xs text-neutral-400 font-sans italic mt-2">
+          {isEn
+            ? "*Note: Some projects might be private or confidential and are not displayed based on client requests and non-disclosure agreements."
+            : "*Catatan: Beberapa proyek mungkin bersifat private (rahasia) dan tidak ditampilkan berdasarkan kebijakan dan keinginan klien."}
         </p>
       </section>
 

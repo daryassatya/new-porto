@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { fontTranslations } from '../../utils/translations';
+import { Database, Code2, Server, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { InstagramIcon, GithubIcon, LinkedinIcon } from './SocialIcons.jsx';
+import { fontTranslations } from '../../utils/translations';
 
 export default function StatsExperienceCounter() {
   const [lang, setLang] = useState('id');
@@ -24,6 +25,20 @@ export default function StatsExperienceCounter() {
     { number: "10+", label: t.projects },
     { number: "100%", label: t.onTime },
     { number: "24/7", label: t.support },
+  ];
+
+  const icons = [
+    <Database className="w-5 h-5 text-accent" />,
+    <Code2 className="w-5 h-5 text-accent" />,
+    <Server className="w-5 h-5 text-accent" />,
+    <ShieldCheck className="w-5 h-5 text-accent" />
+  ];
+
+  const techsList = [
+    ["Laravel", "Livewire", "PostgreSQL"],
+    ["React", "Astro", "Tailwind", "Supabase"],
+    ["AWS", "Supabase", "Node.js", "Laravel", "MySQL", "PostgreSQL", "REST API"],
+    ["Daily Backup", "24/7 Uptime", "Security"]
   ];
 
   return (
@@ -77,7 +92,7 @@ export default function StatsExperienceCounter() {
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="inline-flex items-center justify-center p-2 bg-white/10 hover:bg-accent hover:text-primary backdrop-blur-md text-white rounded-full border border-white/20 transition-all duration-300"
-                      title="LinkedIn Profile"
+                      title="LinkedIn"
                     >
                       <LinkedinIcon className="w-3.5 h-3.5" />
                     </a>
@@ -101,36 +116,49 @@ export default function StatsExperienceCounter() {
             </div>
           </div>
 
-          {/* Right Column: Track Record / Capabilities */}
-          <div className="lg:col-span-7 flex flex-col justify-between">
+          {/* Right Column: Core Tech Stack & Capabilities */}
+          <div className="lg:col-span-7 flex flex-col justify-between pt-4 lg:pt-0">
             <div>
-              <div className="inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20 shadow-sm mb-4">
-                <span>{t.badge}</span>
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <span className="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full border border-accent/20">{t.badge}</span>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mt-2">{t.headline}</h3>
+                </div>
               </div>
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4 leading-snug">
-                {t.headline}
-              </h2>
-              <p className="text-neutral-600 font-sans text-base leading-relaxed mb-8">
+
+              <p className="text-neutral-600 font-sans text-sm md:text-base leading-relaxed mb-8">
                 {t.subHeadline}
               </p>
 
-              {/* Capability Cards Grid */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                {t.cards.map((card, idx) => (
-                  <div key={idx} className="bg-neutral-50/80 p-5 rounded-2xl border border-neutral-200/60 hover:border-neutral-300 transition-all duration-300">
-                    <h3 className="font-serif text-base font-bold text-primary mb-1">
-                      {card.title}
-                    </h3>
-                    <p className="text-neutral-600 text-xs font-sans leading-relaxed">
-                      {card.desc}
-                    </p>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {t.cards.map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-neutral-50 border border-neutral-200/80 hover:border-accent/50 hover:bg-white transition-all duration-300 shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-3">
+                        {icons[idx]}
+                      </div>
+                      <h4 className="font-serif font-bold text-primary text-base mb-1.5">{item.title}</h4>
+                      <p className="text-neutral-600 text-xs leading-relaxed mb-4">{item.desc}</p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5 pt-3 border-t border-neutral-200/60">
+                      {techsList[idx].map((tech, tIdx) => (
+                        <span key={tIdx} className="text-[10px] font-semibold text-neutral-600 bg-white px-2 py-0.5 rounded border border-neutral-200">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-sans">
-              <span>{t.bottomBadge}</span>
+            {/* Bottom Trust Badge */}
+            <div className="mt-8 p-4 rounded-2xl bg-accent/5 border border-accent/20 flex items-center gap-3">
+              <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+              <p className="text-xs font-medium text-neutral-700">
+                {t.bottomBadge}
+              </p>
             </div>
           </div>
 

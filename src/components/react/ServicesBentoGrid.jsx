@@ -95,9 +95,15 @@ export default function ServicesBentoGrid() {
           {translationSource.headline}
         </h2>
         
-        <p className="text-neutral-600 font-sans text-base md:text-lg leading-relaxed">
+        <p className="text-neutral-600 font-sans text-base md:text-lg leading-relaxed mb-4">
           {translationSource.subHeadline}
         </p>
+
+        {translationSource.privateNote && (
+          <p className="block text-[10px] sm:text-xs text-neutral-400 font-sans italic mt-2">
+            {translationSource.privateNote}
+          </p>
+        )}
       </div>
 
       {/* Spacious Segmented System Category Tab Switcher (No scale jump, generous spacing) */}
