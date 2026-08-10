@@ -7,7 +7,7 @@ export const fontTranslations = {
       order: "Konsultasi"
     },
     hero: {
-      badge: "Pengembangan Perangkat Lunak & Sistem Web",
+      badge: "Web Developer & IT Consultant",
       headline: "Pengembangan Sistem Informasi & Web Bisnis",
       subHeadline: "Membangun aplikasi web manajemen internal kantor dan platform retail berkinerja tinggi. Pengerjaan teratur dengan standar kode yang bersih, aman, dan teruji dari awal hingga siap pakai.",
       ctaPrimary: "Jelajahi Layanan",
@@ -128,7 +128,7 @@ export const fontTranslations = {
       order: "Consultation"
     },
     hero: {
-      badge: "Software Engineering & Web Systems",
+      badge: "Web Developer & IT Consultant",
       headline: "Custom Web Application & Enterprise Systems",
       subHeadline: "Engineered high-performance operational systems and retail web portals. Built with clean code standards, robust security, and thorough testing from initial architecture to live deployment.",
       ctaPrimary: "Explore Services",
